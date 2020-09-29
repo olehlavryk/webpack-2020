@@ -110,8 +110,7 @@ module.exports = {
   context: path.resolve(__dirname, 'src'),
   mode: 'development',
   entry: {
-    main: ['@babel/polyfill', './index.jsx'],
-    analytics: './analytics.ts'
+    main: ['@babel/polyfill', './js/index.js'],
   },
   output: {
     filename: filename('js'),
@@ -120,8 +119,8 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.json', '.png'],
     alias: {
-      '@models': path.resolve(__dirname, 'src/models'),
-      '@': path.resolve(__dirname, 'src'),
+      '@js': path.resolve(__dirname, 'src/js'),
+      '@src': path.resolve(__dirname, 'src'),
     }
   },
   optimization: optimization(),
